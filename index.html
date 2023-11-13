@@ -1,50 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="logo-removebg-preview.png" type="image/x-icon">
     <title>Death lifter </title>
     <link rel="stylesheet" href="style.css">
-   
+
 
 </head>
+
 <body>
     <div class="navbar">
 
-            <div class="logo">
-                <img src="logo.jpg" alt="logo" width="54px">
-            </div>
-                <div class="hm">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
+        <div class="logo">
+            <img src="logo.jpg" alt="logo" width="54px">
+        </div>
+        <div class="hm">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
 
-                </div>
-            <div class="link">
-                <ul>
+        </div>
+        <div class="link">
+            <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About us</a></li>
-               <li> <a href="#">Programs</a></li>
+                <li> <a href="#">Programs</a></li>
                 <li><a href="#">Trainers</a></li>
                 <li><a href="#">Schedule</a></li>
                 <li><a href="#">Blog</a></li>
-               <li><a href="#">Contact us</a></li>
-        </ul>
-    </div>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </div>
 
     </div>
 
+    <div class="background">
+        <img src="BackGround.jpg" alt="Background">
+        <p>BE STRONG</b> </p>
+        <h1>ONE DAY OR DAY ONE</h1>
+
+        <div class="buttoni">
+            <button type="button"><span></span>Log In</button>
+            <button type="button"><span></span>Sing Up</button>
+
+        </div>
+    </div>
 
 
-<script>
-    let hm = document.querySelector(".hm");
-    hm.onclick = function(){
-      let navbar = document.querySelector(".link");
-        navbar.classList.toggle("active");
 
-    }
+    <script>
+        let hm = document.querySelector(".hm");
+        hm.onclick = function () {
+            let navbar = document.querySelector(".link");
+            navbar.classList.toggle("active");
 
-</script>
+        }
+
+    </script>
 </body>
+
 </html>

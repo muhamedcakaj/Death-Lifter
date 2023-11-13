@@ -1,9 +1,9 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
 }
 
-.navbar{
+.navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -13,7 +13,7 @@
 .link ul {
     list-style: none;
     display: flex;
-    
+
 }
 
 .link a {
@@ -46,7 +46,7 @@
 }
 
 .link a:not(:last-child)::after {
-  
+
     content: "";
     position: absolute;
     width: 100%;
@@ -56,7 +56,7 @@
     background-color: transparent;
     transform: scaleX(0);
     transform-origin: bottom right;
-    transition: transform 0.3s ease; 
+    transition: transform 0.3s ease;
 }
 
 .link a:hover::after {
@@ -65,73 +65,161 @@
 }
 
 
-  
-.hm{
+
+.hm {
     display: none;
 }
 
-@media only screen and (max-width: 1320px){
-    .navbar{
+@media only screen and (max-width: 1320px) {
+    .navbar {
         padding: 0 50px;
     }
 
 }
 
-@media only screen and (max-width: 1100px){
-    .navbar{
+@media only screen and (max-width: 1100px) {
+    .navbar {
         padding: 0 30px;
     }
 
 }
 
-@media only screen and (max-width: 900px){
-   .hm{
-    display: block;
-    cursor: pointer;us
-   }
+@media only screen and (max-width: 900px) {
+    .hm {
+        display: block;
+        cursor: pointer;
+        us
+    }
 
-   .hm .line{
-    width: 30px;
-    height: 3px;
-    background: #fefefe;
-    margin: 6px 0;
-   }
 
-   .link{
-    height: 0;
+    .hm .line {
+        width: 30px;
+        height: 3px;
+        background: #fefefe;
+        margin: 6px 0;
+    }
+
+    .link {
+        height: 0;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        ;
+        background: black;
+        transition: 0.5s;
+        overflow: hidden;
+    }
+
+    .link.active {
+        height: 450px;
+
+    }
+
+    .link ul {
+        display: block;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+
+    }
+
+    .link.active ul {
+        opacity: 1;
+    }
+
+    .link ul li a {
+        margin-bottom: 27px;
+        font-size: 25px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+
+
+}
+
+.background img {
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    position: relative;
+    cursor: pointer;
+
+}
+
+.background p {
     position: absolute;
-    top: 50px;
-    left: 0;
-    right: 0;
-    width: 100vw;;
-    background: black;
-    transition: 0.5s;
-    overflow: hidden;
-   }
+    top: 50%;
+    left: 77%;
+    transform: translate(-46%, -46%);
+    color: black;
+    padding-bottom: 500px;
+    font-size: 30px;
 
-   .link.active{
-    height: 450px;
+}
 
-   }
+.background h1 {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-37%, -37%);
+    color: brown;
+    padding-bottom: 500px;
+    font-size: 40px;
 
-   .link ul{
-    display: block;
-    width: fit-content;
-    margin: 80px auto 0 auto;
+}
+
+.buttoni {
+    width: 100%;
+    left: 28%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-180%);
     text-align: center;
+    color: #fff;
+}
+
+button {
+    width: 200px;
+    padding: 15px;
+    0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #800000;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span {
+    background: black;
+    height: 100%;
+    width: 0%;
+    border: radius 25px;
+    position: absolute;
+    left: 0%;
+    bottom: -0%;
+    z-index: -1;
     transition: 0.5s;
-    opacity: 0;
 
-   }
 
-   .link.active ul{
-    opacity: 1;
-   }
+}
 
-   .link ul li a{
-    margin-bottom: 27px;
-    font-size: 25px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-   }
+button:hover span {
+    width: 100%;
+}
 
+button:hover {
+    border: none;
 }

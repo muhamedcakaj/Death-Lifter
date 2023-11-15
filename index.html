@@ -38,17 +38,20 @@
     </div>
 
     <div class="background">
-        <img src="BackGround.jpg" alt="Background">
-        <p>BE STRONG</b> </p>
-        <h1>ONE DAY OR DAY ONE</h1>
-
+        <img src="pawel-bulwan-JWK2H-2qz1Y-unsplash.jpg" alt="Background">
+        
+        <h1 id="typewriter"></h1>
+    
         <div class="buttoni">
-            <button type="button"><span></span>Log In</button>
-            <button type="button"><span></span>Sing Up</button>
-
+            <div class="signup">
+                <button type="button">Sign Up</button>
+            </div>
+            <div class="signup-text">
+                <p><a href="#">Already have an account?</a></p>
+            </div>
         </div>
     </div>
-
+    
 
 
     <script>
@@ -56,8 +59,30 @@
         hm.onclick = function () {
             let navbar = document.querySelector(".link");
             navbar.classList.toggle("active");
-
         }
+
+      
+const textToType = "Your only limit is you.";
+
+
+const typewriter = document.getElementById("typewriter");
+
+
+function typeWriter(text, index) {
+    if (index < text.length) {
+        typewriter.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(() => {
+            typeWriter(text, index);
+        }, 95); // Change the typing speed here (milliseconds)
+    }
+}
+
+
+window.onload = function () {
+    typeWriter(textToType, 0);
+};
+
 
     </script>
 </body>
